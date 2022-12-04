@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { ContacFormComponent } from './contac-form/contac-form.component';
+import { ContacFormComponent } from './contact-form/contact-form.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';

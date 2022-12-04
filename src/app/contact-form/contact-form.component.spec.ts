@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ContacFormComponent } from './contac-form.component';
+import { ContacFormComponent } from './contact-form.component';
 import { ContactsService } from '../services/contacts.service';
 import { IContact } from '../interfaces/contact.interface';
 import { Router } from '@angular/router';
@@ -46,7 +46,7 @@ describe('ContacFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call generate form withou get contact data', () => {
+  it('should call generate form without get contact data', () => {
     const spy = jest.spyOn(component, 'generateForm')
     const spyContact = jest.spyOn(component, 'getUser')
 
@@ -87,7 +87,7 @@ describe('ContacFormComponent', () => {
     expect(spyWindow).toHaveBeenCalled();
   })
 
-  it('should redirect to list when succes save a contact', async() => {
+  it('should call saveContact on contactService with correct value', async() => {
     const spyService = jest.spyOn(service, 'saveContact').mockResolvedValue(mockContact);
     const form = {
       valid: true,
@@ -100,7 +100,7 @@ describe('ContacFormComponent', () => {
 
   })
 
-  it('should call alert when error to salve contact data', async() => {
+  it('should call alert when error to save contact data', async() => {
     const spyService = jest.spyOn(service, 'saveContact').mockResolvedValue(mockContact);
     const spyWindow = jest.spyOn(window, 'alert').mockImplementation(() => { });
     const form = {

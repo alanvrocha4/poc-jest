@@ -6,8 +6,8 @@ import { ContactsService } from '../services/contacts.service';
 
 @Component({
   selector: 'app-contac-form',
-  templateUrl: './contac-form.component.html',
-  styleUrls: ['./contac-form.component.css']
+  templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.css']
 })
 export class ContacFormComponent implements OnInit {
 
