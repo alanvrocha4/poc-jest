@@ -21,12 +21,11 @@ export class ContacFormComponent implements OnInit {
   public contact: IContact;
   public form: FormGroup;
 
-  ngOnInit(): void {
-    console.log(this.activeRoute);
+  async ngOnInit(): Promise<void> {
     this.id = this.activeRoute.snapshot.params['id'];
 
     if (this.id) {
-      this.getUser();
+      await this.getUser();
     } else {
       this.generateForm();
     }
@@ -54,7 +53,6 @@ export class ContacFormComponent implements OnInit {
     if (form.valid) {
       try {
         await this.contactService.saveContact(form.value as IContact);
-        this.router.navigateByUrl('/list');
       } catch (error) {
         alert('Erro ao salvar dados de contato');
       }
