@@ -1,0 +1,28 @@
+
+.container {
+    padding-top: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row > * {
+    width: unset;
+}
+
+.row > table {
+    width: 100% !important;
+    margin-top: 3rem;
+}
+
+.row > table td span {
+    margin-right: 32px;
+    cursor: pointer;
+    color:cornflowerblue
+}
+
+h1 {
+    width: unset;
+}

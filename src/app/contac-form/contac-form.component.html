@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <h3>{{id ? 'Editar' : 'Cadastrar' }} Contato</h3>
+            <button type="button" class="btn btn-primary" routerLink="/">Voltar</button>
+        </div>
+        <div class="form" *ngIf="form">
+            <form [formGroup]="form">
+                <input type="hidden" class="form-control" id="id" formControlName="id">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="phone" formControlName="phone">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="submit(form)">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>

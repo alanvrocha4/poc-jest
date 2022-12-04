@@ -1,0 +1,19 @@
+.container { 
+    display: flex;;
+    height: 100vh;
+}
+
+.card {
+    width: 70vh;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}

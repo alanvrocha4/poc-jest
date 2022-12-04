@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row header">
+        <h1>Contatos</h1>
+        <button type="button" class="btn btn-primary" routerLink="/add-contact">Novo Contato</button>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Teleone</th>
+                    <th scope="col" colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let contact of contactList">
+                    <tr>
+                        <td scope="col">{{contact.name}}</td>
+                        <td scope="col">{{contact.email}}</td>
+                        <td scope="col">{{contact.phone}}</td>
+                        <td scope="col" colspan="2">
+                            <span routerLink="{{'/edit-contact/' + contact.id}}">Editar</span>
+                            <span (click)="deleteContact(contact.id!)">Excluir</span>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>
