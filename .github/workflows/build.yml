@@ -14,7 +14,7 @@ jobs:
       - name: npm install and test
         run: |
           npm install
-          npm test:coverage
+          npm run test:coverage
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: sqp_571346c0f1e397f9280234aa16a9f1eac9a6e24c
